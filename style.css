@@ -1,5 +1,4 @@
 *{
-    overflow:visible;
     margin:0;
     padding:0;
     box-sizing:border-box;
@@ -8,13 +7,29 @@
 p{
     font-family:Verdana, Tahoma, sans-serif;
 }
+html, body{
+    height:500vh;
+}
+
+header{
+    position:sticky;
+    top:0;
+    left:0;
+    width:100%;
+    transition:0.6s;
+    z-index:1;
+}
+
+/* header.sticky{
+    position:sticky;
+    top:0px;
+} */
 
 #collapsable-nav{
     background-color:olivedrab;
     border-radius:0;
     border:0px;
     display:block;
-    position:relative;
     padding: 10px 0px 10px 0px;  
     width:100%;
     list-style-type:none;
@@ -63,7 +78,6 @@ p{
 .a-navbar{
     color:white;
     text-decoration:none;
-    /* display:block; */
     font-size:2em;
 }
 
@@ -72,7 +86,6 @@ p{
   flex-direction:column;
   align-items:flex-start;
   width:100%;
-  /* position:relative; */
 }
 
 .li-navbar{
@@ -88,29 +101,13 @@ p{
     background-color:beige;
 }
 
-
-
 .a-navbar1{
     color:rgb(83, 83, 11);
     text-decoration:none;
     width:100%; 
-    font-size:1.5em;
-    
-    /* display:block; */
-    /* text-align:center; */
+    font-size:1.5em; 
+    display:block;
 }
-
-
-
-/* Style the hamburger menu */
-/* a.icon {
-    display: block;
-    position: fixed;
-    padding: 15px 20px 0px 0px;
-    right: 0;
-    top: 0;
-    color:aliceblue;
-  } */
 
 .heading{
     padding: 10px 0px 10px 0px;    
@@ -118,11 +115,11 @@ p{
     margin-top:20px;
     margin-left:10px;
     margin-right:10px;
-    /* background-color:olive; */
     text-align:center;
     font-weight:bold;
     font-size:1.75em;
     color:black;
+    position:relative;
 }
 
 .menu-1, .menu-2, .menu-3{
@@ -132,6 +129,7 @@ p{
     margin:15px 15px 15px 15px;
     justify-content:space-evenly;
     height:1100px;
+    overflow:hidden;
 }
 
 .mt1{
@@ -145,7 +143,6 @@ p{
     position: absolute;
     top: 0;
     right: 0;
-    /* clear:both; */
 }
 
 .md1{
@@ -165,7 +162,6 @@ p{
     position: absolute;
     top: 0;
     right: 0;
-    /* clear:both; */
 }
 
 .md2{
@@ -185,7 +181,6 @@ p{
     position: absolute;
     top: 0;
     right: 0;
-    /* clear:both; */
 }
 
 .md3{
@@ -365,6 +360,5 @@ p{
         
         .kanan.active{
             display:flex;
-            visibility:visible;
         }
     }
